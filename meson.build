@@ -8,5 +8,7 @@ deps =  declare_dependency(
 dolly = executable(
   'dolly',
   'dolly.c', common_src,
-  dependencies : deps
+  dependencies : deps,
+  install : true,
+  install_dir : get_option('bindir')
 )
